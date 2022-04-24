@@ -1,0 +1,25 @@
+ Notes to make English & Arabic website [https://www.youtube.com/watch?v=RCSC28cVAAw&list=PLDoPjvoNmBAxNQiUCxhjfDM8STo1_Dl8c&index=2]
+ ---------------------------------------
+
+1- Start with English page
+2- Don't use words direct in template
+3- Padding & margin for parent better than child
+4- Don't forget page direction attribute. all block elements depend on it.
+    <html lang='ar' dir='rtl'>  [the english direction is left by defaul]
+5- Highlite what you will edit soon.
+    add a comment to the property which need to change in arabic css file [to select all comments ctr+f]
+6- Don't forget comments & ordering of elements [Orgnize the arabic css file like the english one with the same order]
+7- Use [inline-block] instead of [float] if you don't need float
+8- In the HTML file put the rtl.css file link after the english css file link [cause the last css file is overide the previous so any changes in arabic style appears] 
+9- Consider word length when specify element width. [maybe the arabic word translation longer than english]
+10- Don't use element that need to change like arrows. use pseudo elements.
+    ex[.parent span:after {
+        font-family: 'FontAwesome';
+        content: "\f053";
+        color: #333;
+    }] for eng
+    [.parent span:after {
+        content: "\f054";
+    }] for ar
+11- Use the be direction isolation tag <bdi><bdi/> [to isolate arabic text from english paragraph instead of <span> and same with english text inside arabic paragraph]
+12- Use Attribute dir="auto" with text elements [like input field to change the direction of text when the language change] Note: this attribute doesn't support from all browsers.
